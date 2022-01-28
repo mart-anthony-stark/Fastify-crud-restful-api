@@ -4,6 +4,7 @@ require("dotenv").config({});
 
 fastify.register(require("./routes/test.route"));
 fastify.register(require("./routes/auth.route"));
+fastify.register(require("./routes/client.route"));
 
 const PORT = process.env.PORT || 3000;
 const startApp = async () => {
