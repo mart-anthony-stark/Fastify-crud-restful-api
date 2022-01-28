@@ -18,12 +18,12 @@ const clientRoutes = (fastify, options, done) => {
     clientController.createClient
   );
   fastify.put(
-    "/clients",
+    "/clients/:id",
     { preHandler: [isAuth] },
     clientController.updateClient
   );
   fastify.delete(
-    "/clients",
+    "/clients/:id",
     { preHandler: [isAuth] },
     clientController.deleteClient
   );
