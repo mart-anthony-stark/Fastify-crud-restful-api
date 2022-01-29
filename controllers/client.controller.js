@@ -24,12 +24,12 @@ const getClientById = async (req, reply) => {
 
 const createClient = async (req, reply) => {
   try {
-    const { name, email, street_addreplys, city, zip_code, country } = req.body;
+    const { name, email, street_address, city, zip_code, country } = req.body;
     const client = await new Client({
       user_id: req.user._id,
       name,
       email,
-      street_addreplys,
+      street_address,
       city,
       zip_code,
       country,
